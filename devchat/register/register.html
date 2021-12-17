@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>Registration</title>
+    <link href="register.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><span class="regtitle">DevChat</span></h1>
+    </header>
+    <main>
+        <div class="form1">
+            <form>
+                <h1>Create Your Account</h1>
+                <label for="username" class="labels">USERNAME:</label>
+                <input id="username" name="username" type="text" required class="inputs">
+                <br>
+                <label for="usrpwd" class="labels">PASSWORD:</label> 
+                <input id="usrpwd" name="usrpwd" type="password" required class="inputs">
+                <br>
+                <label for="confpwd" class="labels">RE-TYPE PASSWORD:</label>
+                <input id="confpwd" name="confpwd" type="password" required class="inputs">
+                <br>
+                <label for="usremail" class="labels">EMAIL ADDRESS:</label>
+                <input id="usremail" name="usremail" type="type" required class="inputs">
+                <br>
+                <br>
+                <input type="submit" value="Create Your Account" class="submit1" onclick="matchPassword()">
+            </form>
+        </div>
+    </main>
+    <script src="style\script.js"></script>
+</body>
+</html>
