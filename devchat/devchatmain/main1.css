@@ -45,9 +45,31 @@ navbar button{
     padding: 20px;
 }
 
+.grid-container ul {
+    list-style-type: none;
+}
+
+.avatar {
+    background-image: url('https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/angular-js-512.png');
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .grid-container > div {
     background-color: rgb(0,0,0,0.5);
+    text-align: none;
+}
+
+.gridtitle {
     text-align: center;
+}
+
+.dcblog {
+    padding:0px 50px;
 }
 
 .bottomnav {
