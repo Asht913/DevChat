@@ -7,47 +7,81 @@ body {
     background: linear-gradient(90deg, black, red, black, red);
 }
 
+/*title of page*/
 .headtitle {
     text-align: center;
     background: linear-gradient(45deg, black, red, black, red);
-    color: #fff;
+    color: rgb(169,169,169);
     padding: 10px;
 }
 
 .headtitle h1 {
     animation: bounceIn 2s;
+    font-size: 50px;
 }
 
+/* top navbar */
 .topnav {
     background: linear-gradient(-45deg, darkgray, rgb(39, 38, 38));
     box-sizing: border-box;
     padding: 12px 0px 12px 0px;
+    text-align: center;
 }
 
 navbar a {
     text-decoration: none;
     border: 1px solid #000;
-    padding: 10px;
+    padding: 10px 20px 10px 20px;
     background-color: gray;
     color: white;
+    margin: 0px 5px 0px 5px;
 }
 
-navbar button{
-    float: right;
-    padding: 4px;
+/*left navbar */
+#leftnav {
+    position: fixed;
+    z-index: 1;
+    left: -8.25em;
+    display:flexbox;
+    height: 100%;
+    background-color:rgb(39, 38, 38, 1);
+    color: #fff;
+}
+#leftnav button {
+    padding: 5px;
+    margin: 5px;
 }
 
-.grid-container {
-    display: grid;
-    grid-template: 500px / 250px auto 250px;
-    background-color: rgba(255, 255, 255, 0.5);
-    gap: 20px;
-    padding: 20px;
+#leftnav:hover {
+    left:0;
+    transition: left 300ms linear 0.1s;
 }
 
-.grid-container ul {
-    list-style-type: none;
+#leftnav .hover-content{
+    margin-right: 3em;
 }
+
+/*right navbar*/
+#rightnav {
+    position: fixed;
+    z-index: 1;
+    right: -8.25em;
+    display: flexbox;
+    height: 100%;
+    background-color: rgb(39,38,38,1);
+    color: #fff;
+}
+
+#rightnav:hover {
+    right:0;
+    transition: right 300ms linear 0.1s;
+}
+
+#rightnav .hover-content {
+    margin-left: 3em;
+}
+
+/*avatar section */
 
 .avatar {
     background-image: url('https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/angular-js-512.png');
@@ -57,20 +91,50 @@ navbar button{
     border-radius: 50%;
     display: inline-block;
     vertical-align: middle;
+    margin-right: 5px;
 }
 
-.grid-container > div {
-    background-color: rgb(0,0,0,0.5);
-    text-align: none;
-}
-
-.gridtitle {
+#devvoice {
     text-align: center;
 }
 
-.dcblog {
-    padding:0px 50px;
+/* blog section */
+
+.blogstyle {
+    text-align: left;
+    padding: 5px;
+    align-items: center;
+    color: #fff;
 }
+
+.blogstyle li {
+    list-style: none;
+    padding: 5px 0px 5px 0px;
+}
+
+.blogstyle form {
+    text-align: center;
+
+}
+
+.blogstyle input {
+    padding: 5px 30px 5px 30px;
+    background-color: rgb(169,169,169);
+}
+
+
+.dcblog {
+    padding:10px 50px;
+    background: rgb(0,0,0,0.5);
+    height: 100%;
+    margin-top: 20px;
+    margin-right: 200px;
+    margin-left: 200px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+}
+
+/* bottom navbar */
 
 .bottomnav {
     background: linear-gradient(-45deg, darkgray, rgb(39, 38, 38));
@@ -79,6 +143,7 @@ navbar button{
     bottom: 0;
     position: fixed;
     width: 100%;
+    z-index: 2;
 }
 
 .bottomnav a {
