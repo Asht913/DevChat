@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DevChat</title>
+    <link href="darkmode.css" rel="stylesheet" type="text/css" id="pagestyle">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="/devchatmain/images/DevLogo.png" />
+</head>
+
+<body>
+
+    <head>
+        <!--title section-->
+        <div class="headtitle">
+            <h1><img src="/devchatmain/images/DevLogo.png" id="logo" />DevChat<img src="/devchatmain/images/DevLogo.png" id="logo" /></h1>
+
+        </div>
+
+
+        <!---top navbar section--->
+        <div class="topnav">
+            <navbar>
+                <a href=""><span class="material-icons">home</span>Home</a>
+                <a href=""><span class="material-icons">people</span>Friends</a>
+                <a href="/login/index.html"><span class="material-icons">login</span>Login</a>
+                <a href="/register/register.html"><span class="material-icons">app_registration</span>Register</a>
+            </navbar>
+        </div>
+    </head>
+
+
+    <!---main content--->
+    <main>
+        <div>
+
+            <!---left navbar section--->
+            <div class="leftnav">
+                <div class="hover-content">
+                    <h1>Settings</h1>
+                    <h5>Change Theme</h5>
+                    <a onClick="swapStyleSheet()"> <img id = "ldimg" src="/devchatmain/images/Lightmode.png" alt=""></a>
+                </div>
+            </div>
+
+
+            <!--right navbar section-->
+            <div class="rightnav">
+                <div class="hover-content">
+                    <h1>Friends</h1>
+                </div>
+            </div>
+
+
+
+
+            <!---blog section--->
+            <span class="blogstyle">
+                <div class="dcblog">
+                    <div id="devvoice">
+                        <h1>DevBox</h1>
+                    </div>
+                    <div id="greets">
+                        <ul style="margin-top: 10px">
+                            <li>
+                                <span id="personicon" class="material-icons">person</span><span>Welcome to
+                                    DevChat.</span>
+                            </li>
+                            <li>
+                                <span id="personicon" class="material-icons">person</span><span>This is a blog site for
+                                    local developers.</span>
+                            </li>
+                            <li>
+                                <span id="personicon" class="material-icons">person</span><span>Hope you enjoy!</span>
+                            </li>
+                        </ul>
+                        <form action="">
+                            <input type="text"/>
+                            <input type="submit" value="Submit" />
+
+                        </form>
+                    </div>
+                </div>
+            </span>
+    </main>
+
+
+
+    <footer>
+        <!---bottom navbar--->
+        <div class="bottomnav">
+            <nav>
+                <a href="">Contact</a>
+                <a href="">About</a>
+                <a href="https://www.youtube.com" target="_blank"><img src="/devchatmain/images/YouTube.png" class="socialmedlogo"/></a>
+                <a href="https://www.tumblr.com/login" target="_blank"><img src="/devchatmain/images/Tumblr.png" class="socialmedlogo"/></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="/devchatmain/images/Facebook2.png" class="socialmedlogo"/></a>
+                <a href="https://www.linkedin.com/home" target="_blank"><img src="/devchatmain/images/LinkedIn.png" class="socialmedlogo"/></a>
+                <a href="https://twitter.com/?lang=en" target="_blank"><img src="/devchatmain/images/Twitter.png" class="socialmedlogo"/></a>
+                <a href="https://www.reddit.com/" target="_blank"><img src="/devchatmain/images/Reddit.png" class="socialmedlogo"/></a>
+
+            </nav>
+        </div>
+    </footer>
+    <script src="style\script.js"></script>
+</body>
+
+</html>
