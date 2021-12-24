@@ -1,24 +1,26 @@
 * {
     padding:0;
     margin:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     background-color: rgb(0,0,0);
     font-family: 'Alfa Slab One', cursive;
+    margin: 0;
 
 }
 
 /*title of page*/
 .headtitle {
     text-align: center;
-    background: rgb(0,0,0);
     color: rgb(169,169,169);
     padding: 0px;
 }
 
 .headtitle h1 {
-    animation: bounceIn 2s;
+    animation: bounceIn 1s;
     font-size: 50px;
 }
 
@@ -45,7 +47,6 @@ navbar a {
     text-decoration: none;
     border: 2px solid #000;
     padding: 10px 20px 10px 20px;
-    background-color: rgb(0,0,0);
     color: white;
     margin: 0px 5px 0px 5px;
     border-radius: 20px;
@@ -65,87 +66,15 @@ navbar a:hover {
     font-weight: bold;
 }
 
-
-/*left navbar */
-.leftnav {
-    position: fixed;
-    z-index: 1;
-    left: -8.25em;
-    display:flexbox;
-    height: 400px;
-    background-color:rgb(39, 38, 38, 1);
-    color: #fff;
-    border-radius: 30px;
-    border: 2px solid #fff;
-    width: 200px;
-}
-.leftnav button {
-    padding: 5px;
-    margin: 5px;
-}
-
-.leftnav a img {
-    width: 75px;
-    height: 75px;
-}
-
-.leftnav span {
-    margin-right:0px;
-    font-size: 30px;
-}
-
-.leftnav:hover {
-    left:0;
-    transition: left 300ms linear 0.1s;
-}
-
-.leftnav .hover-content{
-    margin-right: 3em;
-}
-
-#invertcolors {
-    background:none;
-}
-
-/*right navbar*/
-.rightnav {
-    position: fixed;
-    z-index: 1;
-    right: -8.25em;
-    display: flexbox;
-    height: 400px;
-    background-color: rgb(39,38,38,1);
-    color: #fff;
-    border-radius: 30px;
-    border: 2px solid #fff;
-    width: 200px;
-}
-
-.rightnav:hover {
-    right:0;
-    transition: right 300ms linear 0.1s;
-}
-
-.rightnav .hover-content {
-    margin-left: 3em;
-    text-align: right;
-}
-
-/*avatar section */
-
-.avatar {
-    font-family: 'Material Icons';
-    background-size: cover;
-    height: 50px;
+navbar a img {
     width: 50px;
-    border-radius: 50%;
-    display: inline-block;
+    height: 50px;
     vertical-align: middle;
-    margin-right: 5px;
 }
 
-#devvoice {
-    text-align: center;
+@media only screen and (max-width:1420px) {
+    .topnav {display:none};
+
 }
 
 /* blog section */
@@ -159,69 +88,121 @@ navbar a:hover {
     margin-right: 5px;
 }
 
-.blogstyle {
-    text-align: left;
-    padding: 5px;
-    align-items: center;
-    color: #fff;
+.dcblog {
+    padding:10px 50px;
+    background: rgb(58, 55, 55);
+    height: 100%;
+    border-radius: 30px;
+    text-align:center;
+    color:#ffffff;
 }
 
-.blogstyle li {
+.dcblogborder {
+    background: linear-gradient(90deg, orange, orangered, rgb(36,119,226) 20%, lightblue 80%, orangered, orange);
+    padding: 5px;
+    margin-right:190px;
+    margin-left: 190px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.dcblog li {
     list-style: none;
     padding: 5px 0px 5px 0px;
     background-color: #000;
     margin: 5px 0px 5px 0px;
     border: 2px solid #fff;
-    border-radius: 20px;
+    border-radius: 10px;
+    text-align: left;
 }
 
-.blogstyle form {
+.dcblog form {
     text-align: center;
+    margin-top: 50px;
 
 }
 
-.blogstyle input {
+#blog {
+    border: 3px solid #ffffff;
+    width: 600px;
+    height:100px;
+    border-radius: 10px;
+    margin:10px;
+    background-color: rgb(0,0,0);
+    resize: none;
+    outline: none;
+    text-align: left;
+    padding:10px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+form label {
+    font-weight: 800;
+    font-size: 25px;
+}
+
+@media screen and (max-width:1200px) {
+    #blog {
+        width:400px;
+        height:50px;
+    }
+    
+}
+
+.dcblog input {
     padding: 5px 30px 5px 30px;
     border-radius: 20px;
+    
 }
 
-
-.dcblog {
-    padding:10px 50px;
-    background: rgb(128,128,128, 0.5);
-    height: 100%;
-    margin-top: 20px;
-    margin-right: 200px;
-    margin-left: 200px;
-    border: 2px solid #fff;
-    border-radius: 30px;
-}
 
 /*weather etc..*/
 
-#extcontent {
-    display: inline-block;
-    align-items: center;
-    width:100%;
-    margin-top: 100px;
+#contentsection {
+    padding: 50px;
+    border-radius: 30px;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.contents {
+    width: 35%;
+    height:auto;
+    padding: 3px;
+    color:white;
+    float: left;
+    background: linear-gradient(orange, orangered, rgb(36,119,226) 20%, lightblue 80%, orangered, orange);
+    border-radius: 30px;
+    margin-left:180px;
+    color:rgb(0,0,0);
+    margin-bottom: 50px;
 }
 
 .content1 {
     background-color:#000;
-    width: 200px;
-    border: 15px solid white;
-    padding: 5px;
-    margin: 100px 20px 20px 100px;
-    color:white;
+    margin:5px;
+    height: 100%;
+    border-radius: 30px;
 }
 
 .content2 {
     background-color:#000;
-    width: 200px;
-    border: 15px solid white;
-    padding: 5px;
-    margin: 100px 20px 20px 100px;
-    color:white;
+    margin:5px;
+    height: 100%;
+    border-radius: 30px;
+}
+
+@media only screen and (max-width: 1900px) {
+    .contents {
+        margin-left: 32%;
+    }
+    
+}
+
+iframe {
+    border-radius: 30px;
 }
 
 /* bottom navbar */
@@ -230,40 +211,33 @@ navbar a:hover {
     background-color: rgb(0,0,0);
     box-sizing: border-box;
     padding: 12px 0px 12px 0px;
-    position:fixed;
     bottom: 0;
     width: 100%;
-    z-index: 2;
     border: 2px solid #fff;
     text-align: center;
     border-radius: 30px;
+    overflow:hidden;
 }
 
 .bottomnav a {
     text-decoration: none;
     border: 1px solid #000;
     padding: 10px 20px 10px 20px;
-    background-color: #000;
     color: white;
     margin: 0px 5px 0px 5px;
     border-radius: 20px;
+}
+
+.bottomnav a:hover {
+    background-color: rgb(255,255,255);
+    color: rgb(0,0,0);
+    font-weight: bold;
 }
 
 .socialmedlogo {
     height:30px;
     width: 30px;
     vertical-align: middle;
-}
-
-.socialmedlogo:hover {
-    background-color: null;
-}
-
-
-.bottomnav a:hover {
-    background-color: rgb(255,255,255);
-    color: rgb(0,0,0);
-    font-weight: bold;
 }
 
 @keyframes bounceIn {
