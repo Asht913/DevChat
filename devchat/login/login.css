@@ -1,13 +1,14 @@
-html {
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
+html{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
+
 body{
-    display:inline-block;
-    background: linear-gradient(90deg, rgb(70, 63, 63),#fff, rgb(70,63,63));
-  }
-  
+  display:inline-block;
+  background: linear-gradient(90deg, rgb(70, 63, 63),#fff, rgb(70,63,63));
+}
+
 .regtitle {
   text-align: center;
   color: rgb(0,0,0);
@@ -31,7 +32,8 @@ body{
   margin-top: 20px;
 }
 
-.form1 {
+
+.login1 {
   padding:10px 50px;
     background: #ffffff;
     height: 100%;
@@ -46,25 +48,25 @@ body{
 }
 
 .inputs{
-    padding:5px 20px 5px 20px;
-    margin: 10px;
-    border: 1px solid #000;
-    opacity: none;
-    transition: box-shadow 0.5s ease;
-  }
-  
-  .inputs:hover {
-    box-shadow: 2px 2px 5px #000;
-  }
+  padding:5px 20px 5px 20px;
+  margin: 10px;
+  border: 1px solid #000;
+  opacity: none;
+  transition: box-shadow 0.5s ease;
+}
 
-  .submit1 {
-    padding: 5px 20px 5px 20px;
-    background: linear-gradient(45deg, #fff, gray);
-    color: #000;
-    transition: color 0.5s ease;
-  }
-  
-  .submit1:hover {
-    padding: 5px 20px 5px 20px;
-    color: #fff;
-  }
+.inputs:hover {
+  box-shadow: 2px 2px 5px #000;
+}
+
+.submit1 {
+  padding: 5px 20px 5px 20px;
+  background: linear-gradient(45deg, #fff, gray);
+  color: #000;
+  transition: color 0.5s ease;
+}
+
+.submit1:hover {
+  padding: 5px 20px 5px 20px;
+  color: #fff;
+}

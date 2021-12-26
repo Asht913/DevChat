@@ -18,20 +18,19 @@ function swapStyleSheet() {
     if(themeSwap.getAttribute('href') == 'darkmode.css')
     { 
         themeSwap.setAttribute('href' , 'lightmode.css')
-        imgSwap.src = '/devchatmain/images/Darkmode.png' 
+        imgSwap.src = '/devchatmain/images/Lightmode.png' 
         
     } 
     else{
         themeSwap.setAttribute('href' , 'darkmode.css')
-        imgSwap.src = '/devchatmain/images/Lightmode.png'
+        imgSwap.src = '/devchatmain/images/Darkmode.png'
         
 
     }
 }
 
-function toggleblur(){
-    document.getElementsById("test").style.color = "blue";
-    
-}
+function toggleBlur(){
+    let blur = document.getElementById("blurid");
 
     
+}
