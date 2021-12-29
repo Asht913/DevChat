@@ -1,0 +1,70 @@
+html {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display:inline-block;
+    background: linear-gradient(90deg, rgb(70, 63, 63),#fff, rgb(70,63,63));
+  }
+  
+.regtitle {
+  text-align: center;
+  color: rgb(0,0,0);
+  padding: 0px;
+  font-size: 25px;
+}
+
+#logo {
+  height: 60px;
+  width:  170px;
+  margin:0px -35px 0px -35px;
+  vertical-align: middle;
+}
+
+.formborder {
+  background: linear-gradient(90deg, orange, orangered, rgb(36,119,226) 20%, lightblue 80%, orangered, orange);
+  padding: 5px;
+  margin-right:190px;
+  margin-left: 190px;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+.form1 {
+  padding:10px 50px;
+    background: #ffffff;
+    height: 100%;
+    border-radius: 30px;
+    text-align:center;
+}
+
+.content {
+  margin:5px;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.inputs{
+    padding:5px 20px 5px 20px;
+    margin: 10px;
+    border: 1px solid #000;
+    opacity: none;
+    transition: box-shadow 0.5s ease;
+  }
+  
+  .inputs:hover {
+    box-shadow: 2px 2px 5px #000;
+  }
+
+  .submit1 {
+    padding: 5px 20px 5px 20px;
+    background: linear-gradient(45deg, #fff, gray);
+    color: #000;
+    transition: color 0.5s ease;
+  }
+  
+  .submit1:hover {
+    padding: 5px 20px 5px 20px;
+    color: #fff;
+  }
