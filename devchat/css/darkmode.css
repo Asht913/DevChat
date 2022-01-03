@@ -1,0 +1,277 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(0,0,0);
+    font-family: 'Alfa Slab One', cursive;
+    margin: 0;
+
+}
+
+/*title of page*/
+.headtitle {
+    text-align: center;
+    color: rgb(169,169,169);
+    padding: 0px;
+}
+
+.headtitle h1 {
+    animation: bounceIn 1s;
+    font-size: 50px;
+}
+
+#logo {
+    height: 60px;
+    width:  170px;
+    margin:0px -35px 0px -35px;
+    vertical-align: middle;
+}
+
+/* top navbar */
+.topnav {
+    background: #000;
+    box-sizing: border-box;
+    padding: 12px 0px 12px 0px;
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    border-radius: 30px;
+    border: 2px solid #fff;
+}
+
+navbar a {
+    text-decoration: none;
+    border: 2px solid #000;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    margin: 0px 5px 0px 5px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+navbar a span {
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+navbar a:hover {
+    background-color: rgb(255,255,255);
+    color: rgb(0,0,0);
+    font-weight: bold;
+}
+
+navbar a img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.dropdown {
+    position:relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display:none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0.2);
+    padding: 12px 16px;
+    z-index: 4;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+@media  only screen and (max-width:1160px){
+    .topnav{margin-right: 20px;
+            margin-left: 20px;
+        };
+}
+
+
+/* blog section */
+
+#personicon {
+    background-size: cover;
+    height:30px;
+    width:30px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.dcblog {
+    padding:10px 50px;
+    background: rgb(58, 55, 55);
+    height: 100%;
+    border-radius: 30px;
+    text-align:center;
+    color:#ffffff;
+}
+
+.dcblogborder {
+    background: linear-gradient(90deg, orange, orangered, rgb(36,119,226) 20%, lightblue 80%, orangered, orange);
+    padding: 5px;
+    margin-right:190px;
+    margin-left: 190px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.dcblog li {
+    list-style: none;
+    padding: 5px 0px 5px 0px;
+    background-color: #000;
+    margin: 5px 0px 5px 0px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.dcblog form {
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+#blog {
+    border: 3px solid #ffffff;
+    width: 600px;
+    height:100px;
+    border-radius: 10px;
+    margin:10px;
+    background-color: rgb(0,0,0);
+    resize: none;
+    outline: none;
+    text-align: left;
+    padding:10px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+form label {
+    font-weight: 800;
+    font-size: 25px;
+}
+
+@media screen and (max-width:1200px) {
+    #blog {
+        width:400px;
+        height:50px;
+    }
+    
+}
+
+.dcblog input {
+    padding: 5px 30px 5px 30px;
+    border-radius: 20px;
+    
+}
+
+
+/*weather etc..*/
+
+#contentsection {
+    padding: 50px;
+    border-radius: 30px;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.contents {
+    width: 35%;
+    height:auto;
+    padding: 3px;
+    color:white;
+    float: left;
+    background: linear-gradient(orange, orangered, rgb(36,119,226) 20%, lightblue 80%, orangered, orange);
+    border-radius: 30px;
+    margin-left:180px;
+    color:rgb(0,0,0);
+    margin-bottom: 50px;
+}
+
+.content1 {
+    background-color:#000;
+    margin:5px;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.content2 {
+    background-color:#000;
+    margin:5px;
+    height: 100%;
+    border-radius: 30px;
+}
+
+@media only screen and (max-width: 1900px) {
+    .contents {
+        margin-left: 32%;
+    }
+    
+}
+
+iframe {
+    border-radius: 30px;
+}
+
+/* bottom navbar */
+
+.bottomnav {
+    background-color: rgb(0,0,0);
+    box-sizing: border-box;
+    padding: 12px 0px 12px 0px;
+    bottom: 0;
+    width: 100%;
+    border: 2px solid #fff;
+    text-align: center;
+    border-radius: 30px;
+    overflow:hidden;
+}
+
+.bottomnav a {
+    text-decoration: none;
+    border: 1px solid #000;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    margin: 0px 5px 0px 5px;
+    border-radius: 20px;
+}
+
+.bottomnav a:hover {
+    background-color: rgb(255,255,255);
+    color: rgb(0,0,0);
+    font-weight: bold;
+}
+
+.socialmedlogo {
+    height:30px;
+    width: 30px;
+    vertical-align: middle;
+}
+
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
