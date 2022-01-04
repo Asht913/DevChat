@@ -14,7 +14,7 @@ $user_data = check_login($con);
 
 <head>
     <title>DevChat</title>
-    <link href="lightmode.css" rel="stylesheet" type="text/css" id="pagestyle">
+    <link href="/css/lightmode.css" rel="stylesheet" type="text/css" id="pagestyle">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/x-icon" href="/images/DevLogo.png" sizes="any" />
@@ -27,7 +27,6 @@ $user_data = check_login($con);
         <div class="headtitle">
             <h1><img src="/images/DevLogo.png" id="logo" />DevChat<img src="/images/DevLogo.png"
                     id="logo" /></h1>
-
         </div>
 
 
@@ -36,8 +35,9 @@ $user_data = check_login($con);
             <navbar>
                 <a href=""><span class="material-icons">home</span>Home</a>
                 <a href=""><span class="material-icons">people</span>Friends</a>
-                <a href="/login/login.html"><span class="material-icons">login</span>Login</a>
-                <a href="/register/register.html"><span class="material-icons">app_registration</span>Register</a>
+                <a href="login.php"><span class="material-icons">login</span>Login</a>
+                <a href="logout.php"><span class="material-icons">logout</span>Logout</a>
+                <a href="register.php"><span class="material-icons">app_registration</span>Register</a>
                 <a class="dropdown"><span class="material-icons">settings</span>Settings
                     <div class="dropdown-content">
                         <p>Hello World!<button style="width:60px;">Click ME</button></p>
@@ -45,8 +45,11 @@ $user_data = check_login($con);
                         <p>Light/Dark<button style="width:60px;">Click ME</button></p>
                     </div>
                 </a>
-                <a onClick="swapStyleSheet()"> <img id="ldimg" src="/images/Darkmode.png" alt=""></a>
+                <a onClick="swapStyleSheet()"> <img id="ldimg" src="/images/Lightmode.png" alt=""></a>
             </navbar>
+        </div>
+        <div id="welcomeuser">
+        <p>User: <?php echo$user_data['USER_NAME'];?> has Returned!</p>
         </div>
     </head>
 
@@ -76,7 +79,7 @@ $user_data = check_login($con);
                                 life, but in the end our choices make us."</span>
                         </li>
                     </ul>
-                    <form action="connect.php" method="post"></form>
+                    <form method="post"></form>
                     <label for="blog">What's on your mind?</label>
                     <br>
                     <textarea id="blog" name="blog" row="10" cols="40"></textarea>
@@ -124,7 +127,7 @@ $user_data = check_login($con);
                     class="socialmedlogo" /></a>
         </div>
     </footer>
-    <script src="style\script.js"></script>
+    <script src="/scripts/script.js"></script>
 
 </body>
 

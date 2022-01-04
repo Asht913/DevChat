@@ -72,6 +72,10 @@ navbar a img {
     vertical-align: middle;
 }
 
+#welcomeuser {
+    color: white;
+}
+
 .dropdown {
     position:relative;
     display: inline-block;

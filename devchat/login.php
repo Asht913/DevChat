@@ -44,8 +44,8 @@ session_start();
 
 <!DOCTYPE html>
 <head>
-  <title>Testing Site</title>
-  <link href="login.css" rel="stylesheet">
+  <title>Login</title>
+  <link href="/css/login.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" type="image/x-icon" href="/images/DevLogo.png" sizes="any"/>
 
@@ -59,11 +59,11 @@ session_start();
   </header> 
   <main class="formborder">
     <div class="login1">
-    <form class="content">
+    <form method="POST" class="content">
       <h1>Welcome Back to the Chat!</h1>
       <label class="labels" for="username">USERNAME OR EMAIL</label>
       <br>
-      <input class="inputs" type="text" id="USER_ID" name="USER_NAME" required>
+      <input class="inputs" type="text"  name="USER_NAME" required>
       <br>
       <label class="labels" for="password">PASSWORD</label>
       <br>

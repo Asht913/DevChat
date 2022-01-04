@@ -70,3 +70,12 @@ body{
   padding: 5px 20px 5px 20px;
   color: #fff;
 }
+
+@media only screen and (max-width:375px) {
+  .formborder{
+    margin-right:null;
+    margin-left:null;
+    width: 100%;
+  };
+  
+}
