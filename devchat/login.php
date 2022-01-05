@@ -45,15 +45,15 @@ session_start();
 <!DOCTYPE html>
 <head>
   <title>Login</title>
-  <link href="/css/login.css" rel="stylesheet">
+  <link href="css/login.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="icon" type="image/x-icon" href="/images/DevLogo.png" sizes="any"/>
+  <link rel="icon" type="image/x-icon" href="images/DevLogo.png" sizes="any"/>
 
   </head>
 <body> 
   <header>
     <div class="regtitle">
-    <h1><img src="/images/DevLogo.png" id="logo" />DevChat<img src="/images/DevLogo.png"
+    <h1><img src="images/DevLogo.png" id="logo" />DevChat<img src="images/DevLogo.png"
       id="logo" /></h1>
     </div>
   </header> 

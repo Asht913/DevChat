@@ -26,8 +26,22 @@ body {
 #logo {
     height: 60px;
     width:  170px;
-    margin:0px -35px 0px -35px;
+    margin-right:-35px;
     vertical-align: middle;
+}
+
+#logo2 {
+    height: 60px;
+    width:  170px;
+    margin-left:-35px;
+    vertical-align: middle;
+}
+@media only screen and (max-width:400px){
+    .headtitle h1 {font-size: 40px;}
+    #logo, #logo2 {
+        height: 50px;
+        width: 130px;
+    }    
 }
 
 /* top navbar */
@@ -44,7 +58,6 @@ body {
 
 navbar a {
     text-decoration: none;
-    border: 2px solid rgb(255,255,255);
     padding: 10px 20px 10px 20px;
     color: rgb(0,0,0);
     margin: 0px 5px 0px 5px;
@@ -99,10 +112,16 @@ navbar a img {
     display: block;
 }
 
-@media  only screen and (max-width:1160px){
-    .topnav{margin-right: 20px;
-            margin-left: 20px;
-        };
+@media  only screen and (max-width:400px){
+    .topnav {
+        margin: 0px;
+    }
+    .navbar a {
+        width: 100%;
+        margin: 0px;
+        display:block;
+        float: none;
+    }
 }
 
 /* blog section */
@@ -119,20 +138,34 @@ navbar a img {
 .dcblog {
     padding:10px 50px;
     background: rgb(255,255,255);
-    height: 100%;
     border-radius: 30px;
     text-align:center;
+    height: 290px;
+    max-height: 290px;
+    overflow-y: scroll;
+}
+
+.dcblog::-webkit-scrollbar-thumb {
+    border-radius: 10px;
 }
 
 .dcblogborder {
     background: linear-gradient(90deg, orange, orangered, rgb(36,119,226) 20%, lightblue 80%, orangered, orange);
-    padding: 5px;
+    padding: 10px;
     margin-right:190px;
     margin-left: 190px;
     border-radius: 30px;
     margin-top: 20px;
+    height: 310px;
+    max-height: 310px;
 }
 
+@media only screen and (max-width:400px){
+    .dcblogborder {
+        margin: 20px 0px 0px 0px;
+        width: 100%;
+    }
+}
 
 .dcblog li {
     list-style: none;
@@ -152,16 +185,26 @@ navbar a img {
 
 #blog {
     border: 2px solid #000000;
-    width: 600px;
-    height: 100px;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
     margin:10px;
     background-color: rgb(200,200,200);
-    resize: none;
-    outline: none;
     text-align: left;
     padding:10px;
     font-weight: 600;
+}
+
+@media only screen and (max-width:400px){
+    #blog {
+        width:100%;
+        margin: 5px 0px;
+        padding: 5px;      
+        }
+    .dcblog  {
+        padding: 0;
+        margin:0px;
+    }
 }
 
 form label {
@@ -169,13 +212,6 @@ form label {
     font-size: 25px;
 }
 
-@media screen and (max-width:1200px) {
-    #blog {
-        width:400px;
-        height:50px;
-    }
-    
-}
 
 .dcblog input {
     padding: 5px 30px 5px 30px;
@@ -184,25 +220,18 @@ form label {
 
 /*weather etc..*/
 
-#contentsection {
-    padding: 50px;
-    border-radius: 30px;
-    margin-top: 20px;
-    text-align: center;
-    width: 100%;
-}
-
 .contents {
-    width: 35%;
+    width: auto;
     height:auto;
     padding: 3px;
     color:white;
-    float: left;
     background: linear-gradient(orange, orangered, rgb(36,119,226) 20%, lightblue 80%, orangered, orange);
     border-radius: 30px;
-    margin-left:180px;
+    margin-left:600px;
+    margin-right: 600px;
     color:rgb(0,0,0);
     margin-bottom: 50px;
+    margin-top: 100px;
 }
 
 .content1 {
@@ -219,11 +248,25 @@ form label {
     border-radius: 30px;
 }
 
-@media only screen and (max-width: 1900px) {
+iframe {
+    width:100%;
+    height: 400px;
+}
+
+@media only screen and (max-width: 400px) {
     .contents {
-        margin-left: 32%;
+        margin-left: 0;
+        width:100%;
+        height: 200px;
     }
     
+    iframe {
+        height: 190px;
+    }
+
+    .content1, .content2 {
+        height: 190px;
+    }
 }
 
 iframe {
@@ -233,6 +276,8 @@ iframe {
 /* bottom navbar */
 footer {
     text-align: center;
+    align-items: center;
+    display: block;
 }
 
 .bottomnav {
@@ -240,6 +285,7 @@ footer {
     box-sizing: border-box;
     padding: 12px 0px 12px 0px;
     bottom: 0;
+    margin-bottom: 0;
     width: 100%;
     border: 2px solid rgb(0,0,0);
     text-align: center;

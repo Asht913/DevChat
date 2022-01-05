@@ -14,10 +14,12 @@ $user_data = check_login($con);
 
 <head>
     <title>DevChat</title>
-    <link href="/css/lightmode.css" rel="stylesheet" type="text/css" id="pagestyle">
+    <link href="css/lightmode.css" rel="stylesheet" type="text/css" id="pagestyle">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/x-icon" href="/images/DevLogo.png" sizes="any" />
+    <link rel="icon" type="image/x-icon" href="images/DevLogo.png" sizes="any" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
@@ -25,8 +27,7 @@ $user_data = check_login($con);
     <head>
         <!--title section-->
         <div class="headtitle">
-            <h1><img src="/images/DevLogo.png" id="logo" />DevChat<img src="/images/DevLogo.png"
-                    id="logo" /></h1>
+            <h1><img src="images/DevLogo.png" id="logo" />DevChat<img src="images/DevLogo.png" id="logo2" /></h1>
         </div>
 
 
@@ -34,97 +35,95 @@ $user_data = check_login($con);
         <div class="topnav">
             <navbar>
                 <a href=""><span class="material-icons">home</span>Home</a>
-                <a href=""><span class="material-icons">people</span>Friends</a>
-                <a href="login.php"><span class="material-icons">login</span>Login</a>
+                <a href="accout_info_update.php"><span class="material-icons">account_circle</span>Account</a>
                 <a href="logout.php"><span class="material-icons">logout</span>Logout</a>
-                <a href="register.php"><span class="material-icons">app_registration</span>Register</a>
                 <a class="dropdown"><span class="material-icons">settings</span>Settings
                     <div class="dropdown-content">
-                        <p>Hello World!<button style="width:60px;">Click ME</button></p>
-                        <p>Theme Change<button style="width:60px;">Click ME</button></p>
-                        <p>Light/Dark<button style="width:60px;">Click ME</button></p>
+
+                        <p><button style="width:275px;">Contact US!</button></p>
+                        <p><button style="width:275px;">Account Settings</button></p>
+                        <p><button onClick="swapStyleSheet()" style="width:275px;">Change Theme</button></p>
                     </div>
                 </a>
-                <a onClick="swapStyleSheet()"> <img id="ldimg" src="/images/Lightmode.png" alt=""></a>
+                <a swapStyleSheet()> <img id="ldimg" src="images/Lightmode.png" alt=""></a>
+                <p> User--<?php echo$user_data['USER_NAME'];?>-- Has Returned! his name is </p>
+
+
             </navbar>
+
         </div>
-        <div id="welcomeuser">
-        <p>User: <?php echo$user_data['USER_NAME'];?> has Returned!</p>
-        </div>
+
     </head>
 
 
     <!---main content--->
     <main>
         <!---blog section--->
+        <h1 style="margin-top:50px;">DevBox</h1>
         <div class="dcblogborder">
             <div class="dcblog" id="blurid" class="active">
-                <h1>DevBox</h1>
 
+
+                <?php foreach($query as $q){?>
                 <div>
-                    <ul style="margin-top: 10px">
-                        <li>
-                            <span id="personicon" class="material-icons">person</span><span>Welcome to
-                                DevChat.</span>
-                        </li>
-                        <li>
-                            <span id="personicon" class="material-icons">person</span><span>This is a blog site for
-                                local developers.</span>
-                        </li>
-                        <li>
-                            <span id="personicon" class="material-icons">person</span><span>Hope you enjoy!</span>
-                        </li>
-                        <li>
-                            <span id="personicon" class="material-icons">person</span><span>"We all make choices in
-                                life, but in the end our choices make us."</span>
-                        </li>
+                    <ul id="blog">
+                        <h5><?php echo$q['user_n'] ?> </h5>
+                        <p><?php echo $q['message'] ?></p>
+                        <p style="text-align:right;"><?php echo $q['msg_time'] ?></p>
+
                     </ul>
-                    <form method="post"></form>
-                    <label for="blog">What's on your mind?</label>
-                    <br>
-                    <textarea id="blog" name="blog" row="10" cols="40"></textarea>
-                    <br>
-                    <input type="submit" name="submit" value="submit">
+                    <?php } ?>
 
-                    </form>
                 </div>
+
             </div>
         </div>
-        <div id="contentsection">
-            <div class="contents">
-                <div class="content1">
-                    <iframe width="100%" height="400px" src="https://youtube.com/embed/a00NRSFgHsY"></iframe>
-
-
-                </div>
-            </div>
-            <div class="contents">
-                <div class="content2">
-                    <iframe width="100%" height="400px" src="https://i.gifer.com/Pydv.gif"></iframe>
-                </div>
-            </div>
-        </div>
+       
     </main>
 
 
 
     <footer>
+        
+    <form method="post">
+            <label>What's on your mind?</label>
+            <br>
+            <p name="user_n"></p>
+            <textarea name="message" row="10" cols="40" required></textarea>
+            <br>
+            <button name="new_post" id="button">Post</button>
+
+
+        </form>
+
+        <div class="contents">
+            <div class="content1">
+                <iframe src="acctinfo.php"></iframe>
+
+
+            </div>
+        </div>
+        <div class="contents">
+            <div class="content2">
+                <iframe src="https://i.gifer.com/Pydv.gif"></iframe>
+            </div>
+        </div>
+
+
         <!---bottom navbar--->
         <div class="bottomnav">
             <a href="">Contact</a>
             <a href="">About</a>
-            <a href="https://www.youtube.com" target="_blank"><img src="/images/YouTube.png"
+            <a href="https://www.youtube.com" target="_blank"><img src="images/YouTube.png" class="socialmedlogo" /></a>
+            <a href="https://www.tumblr.com/login" target="_blank"><img src="images/Tumblr.png"
                     class="socialmedlogo" /></a>
-            <a href="https://www.tumblr.com/login" target="_blank"><img src="/images/Tumblr.png"
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/Facebook2.png"
                     class="socialmedlogo" /></a>
-            <a href="https://www.facebook.com/" target="_blank"><img src="/images/Facebook2.png"
+            <a href="https://www.linkedin.com/home" target="_blank"><img src="images/LinkedIn.png"
                     class="socialmedlogo" /></a>
-            <a href="https://www.linkedin.com/home" target="_blank"><img src="/images/LinkedIn.png"
+            <a href="https://twitter.com/?lang=en" target="_blank"><img src="images/Twitter.png"
                     class="socialmedlogo" /></a>
-            <a href="https://twitter.com/?lang=en" target="_blank"><img src="/images/Twitter.png"
-                    class="socialmedlogo" /></a>
-            <a href="https://www.reddit.com/" target="_blank"><img src="/images/Reddit.png"
-                    class="socialmedlogo" /></a>
+            <a href="https://www.reddit.com/" target="_blank"><img src="images/Reddit.png" class="socialmedlogo" /></a>
         </div>
     </footer>
     <script src="/scripts/script.js"></script>
